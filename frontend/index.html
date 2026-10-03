@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FridgeChef AI</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVIGATION -->
+
+    <header>
+
+        <div class="logo">
+            FridgeChef <span>AI</span>
+        </div>
+
+
+        <nav>
+
+            <a href="#home">Home</a>
+
+            <a href="#how">How It Works</a>
+
+            <a href="#features">Features</a>
+
+            <a href="#about">About</a>
+
+        </nav>
+        <a href="#" onclick="showSavedRecipes(); return false;">
+    ❤️ Saved Recipes
+</a>
+
+
+        <button class="login-btn" onclick="login()">
+            Login
+        </button>
+
+    </header>
+
+
+
+    <!-- HOME -->
+
+    <section id="home" class="hero">
+
+
+        <div class="hero-content">
+
+
+            <p class="tagline">
+                SMART COOKING • LESS WASTE
+            </p>
+
+
+            <h1>
+
+                Turn Your Fridge
+                Into <span>Delicious Meals.</span>
+
+            </h1>
+
+
+            <p class="hero-text">
+
+                Transform the ingredients in your fridge
+                into delicious recipes with the power of AI.
+
+            </p>
+
+
+            <button
+                class="generate-main-btn"
+                onclick="openRecipeForm()">
+
+                ✨ Generate Recipe
+
+            </button>
+
+
+            <button
+                class="explore-btn"
+                onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})">
+
+                Explore Recipes →
+
+            </button>
+
+
+            <div class="stats">
+
+
+                <div>
+
+                    <strong>100+</strong>
+
+                    <span>Recipe Ideas</span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>AI</strong>
+
+                    <span>Powered</span>
+
+                </div>
+
+
+                <div>
+
+                    <strong>♻</strong>
+
+                    <span>Less Waste</span>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- HERO IMAGE AREA -->
+
+        <div class="hero-image">
+
+
+            <div class="circle"></div>
+
+
+            <div class="fridge-card">
+
+                🥬 🥕 🍅
+
+                <br>
+
+                🥦 🧀 🥚
+
+                <br>
+
+                🥑 🍎
+
+            </div>
+
+
+            <div class="ai-card">
+
+                ✨ AI Recipe
+
+                <br>
+
+                <strong>Ready!</strong>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- HOW IT WORKS -->
+
+    <section id="how" class="how">
+
+
+        <p class="section-label">
+            HOW IT WORKS
+        </p>
+
+
+        <h2>
+            From Fridge to Feast
+        </h2>
+
+
+        <p class="section-text">
+
+            Creating your next delicious meal
+            is easier than you think.
+
+        </p>
+
+
+        <div class="steps">
+
+
+            <div class="step">
+
+                <div class="number">
+                    01
+                </div>
+
+                <h3>
+                    Enter Ingredients
+                </h3>
+
+                <p>
+
+                    Tell FridgeChef what ingredients
+                    you have available.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="step">
+
+                <div class="number">
+                    02
+                </div>
+
+                <h3>
+                    AI Creates Recipe
+                </h3>
+
+                <p>
+
+                    Our AI analyzes your ingredients
+                    and creates a recipe.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="step">
+
+                <div class="number">
+                    03
+                </div>
+
+                <h3>
+                    Cook & Enjoy
+                </h3>
+
+                <p>
+
+                    Follow the recipe and enjoy
+                    your delicious meal.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- FEATURES -->
+
+    <section id="features" class="features">
+
+
+        <p class="section-label">
+            FEATURES
+        </p>
+
+
+        <h2>
+            Why FridgeChef AI?
+        </h2>
+
+
+        <div class="feature-grid">
+
+
+            <div class="feature-card">
+
+                <div class="icon">
+                    🤖
+                </div>
+
+                <h3>
+                    AI Powered
+                </h3>
+
+                <p>
+
+                    Generate personalized recipes
+                    using artificial intelligence.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="feature-card">
+
+                <div class="icon">
+                    ♻️
+                </div>
+
+                <h3>
+                    Reduce Food Waste
+                </h3>
+
+                <p>
+
+                    Use ingredients already available
+                    in your kitchen.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="feature-card">
+
+                <div class="icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    Quick Recipes
+                </h3>
+
+                <p>
+
+                    Discover simple recipes
+                    quickly.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="feature-card">
+
+                <div class="icon">
+                    🥗
+                </div>
+
+                <h3>
+                    Healthy Choices
+                </h3>
+
+                <p>
+
+                    Create meal ideas based on
+                    your available ingredients.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- RECIPE PREVIEW -->
+
+    <section class="recipe-preview">
+
+
+        <div class="recipe-preview-content">
+
+
+            <p class="section-label">
+                TODAY'S INSPIRATION
+            </p>
+
+
+            <h2>
+                Mediterranean
+                Veggie Bowl
+            </h2>
+
+
+            <p>
+
+                Fresh vegetables, creamy avocado
+                and flavorful herbs combined into
+                a delicious healthy bowl.
+
+            </p>
+
+
+            <button onclick="viewRecipe()">
+
+                View Recipe
+
+            </button>
+
+
+        </div>
+
+
+        <div class="bowl">
+
+            🥗
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- ABOUT -->
+
+    <section id="about" class="about">
+
+
+        <p class="section-label">
+            ABOUT FRIDGECHEF
+        </p>
+
+
+        <h2>
+
+            Smart Cooking for a
+            Sustainable Future.
+
+        </h2>
+
+
+        <p>
+
+            FridgeChef AI helps you transform
+            everyday ingredients into creative meals
+            while reducing unnecessary food waste.
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+
+        <div class="logo">
+
+            FridgeChef <span>AI</span>
+
+        </div>
+
+
+        <p>
+            Smart cooking. Less waste. More delicious.
+        </p>
+
+
+        <p>
+            © 2026 FridgeChef AI
+        </p>
+
+
+    </footer>
+
+
+
+    <!-- RECIPE FORM -->
+
+    <div id="recipeForm" class="recipe-form">
+
+
+        <div class="recipe-form-box">
+
+
+            <button
+                class="close-btn"
+                onclick="closeRecipeForm()">
+
+                ×
+
+            </button>
+
+
+            <p class="section-label">
+                FRIDGECHEF AI
+            </p>
+
+
+            <h2>
+                Create Your Recipe
+            </h2>
+
+
+            <p>
+                Tell us what you have in your fridge.
+            </p>
+
+
+
+            <!-- INGREDIENTS -->
+
+            <label for="ingredients">
+                Ingredients
+            </label>
+
+
+            <textarea
+                id="ingredients"
+                placeholder="Example: tomato, potato, onion, cheese">
+            </textarea>
+
+
+
+            <!-- MEAL TYPE -->
+
+            <label for="mealType">
+                Meal Type
+            </label>
+
+
+            <select id="mealType">
+
+                <option value="Breakfast">
+                    Breakfast
+                </option>
+
+                <option value="Lunch">
+                    Lunch
+                </option>
+
+                <option value="Dinner">
+                    Dinner
+                </option>
+
+                <option value="Snack">
+                    Snack
+                </option>
+
+            </select>
+
+
+
+            <!-- DIET -->
+
+            <label for="diet">
+                Diet
+            </label>
+
+
+            <select id="diet">
+
+                <option value="Vegetarian">
+                    Vegetarian
+                </option>
+
+                <option value="Non-Vegetarian">
+                    Non-Vegetarian
+                </option>
+
+                <option value="Vegan">
+                    Vegan
+                </option>
+
+            </select>
+
+
+
+            <!-- COOKING TIME -->
+
+            <label for="cookingTime">
+                Cooking Time
+            </label>
+
+
+            <select id="cookingTime">
+
+                <option value="15 minutes">
+                    15 minutes
+                </option>
+
+                <option value="30 minutes">
+                    30 minutes
+                </option>
+
+                <option value="45 minutes">
+                    45 minutes
+                </option>
+
+                <option value="60 minutes">
+                    60 minutes
+                </option>
+
+            </select>
+
+
+
+            <!-- GENERATE -->
+
+            <button
+                class="generate-btn"
+                onclick="generateRecipe()">
+
+                Generate My Recipe ✨
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="a.js"></script>
+
+
+</body>
+
+</html>
